@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" hidden>
+  <head>
+    <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+
+      .spicy {
+        font-family: "Bungee Spice";
+        font-size: 10vw;
+        font-palette: --colorized;
+        color: #ffda99;
+      }
+
+      @font-palette-values --colorized {
+        font-family: "Bungee Spice";
+        override-colors: 0 #cc8100, 1 #ffffda;
+      }
+
+      .hotness {
+        font-family: "Bungee Spice";
+        font-palette: --hotness;
+      }
+
+      @font-palette-values --hotness {
+        font-family: "Bungee Spice";
+        override-colors: 0 #ff3a92, 1 #c1cbed;
+      }
+
+      .sepia {
+        --tw-sepia: sepia(100%);
+        filter: var(--tw-sepia);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid grid-cols-1 grid-rows-1">
+      <div class="h-screen col-start-1 row-start-1 sepia">
+        <img
+          class="object-cover w-full h-screen"
+          src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1920&amp;h=1920&amp;q=80"
+        />
+      </div>
+
+      <div
+        class="z-10 flex flex-col justify-center w-full h-screen col-start-1 row-start-1"
+      >
+        <h1 class="text-center spicy">Color Fonts</h1>
+      </div>
+    </main>
+    <footer class="max-w-4xl mx-auto">
+      <h2 class="my-5 text-7xl hotness">Footnotes</h2>
+      <p>
+        <b>Links</b><br />
+        Font used in demo: <a href="https://djr.com/bungee">https://djr.com/bungee</a><br />
+        <a href="https://material.io/blog/color-fonts-are-here"
+          >https://material.io/blog/color-fonts-are-here</a
+        ><br />
+        <a
+          href="https://css-tricks.com/colrv1-and-css-font-palette-web-typography/"
+          >https://css-tricks.com/colrv1-and-css-font-palette-web-typography/</a
+        ><br />
+        <a href="https://developer.chrome.com/blog/colrv1-fonts/"
+          >https://developer.chrome.com/blog/colrv1-fonts/</a
+        >
+      </p>
+
+      <p class="mt-5">
+        <b>Browser Support</b><br />
+        As of September 2022, not supported in Firefix and Safari.
+        </p>
+      <p
+        class="mt-5 ciu_embed"
+        data-feature="colr-v1"
+        data-periods="future_1,current,past_1,past_2"
+        data-accessible-colours="false"
+      >
+        <picture>
+          <source
+            type="image/webp"
+            srcset="https://caniuse.bitsofco.de/image/colr-v1.webp"
+          />
+          <source
+            type="image/png"
+            srcset="https://caniuse.bitsofco.de/image/colr-v1.png"
+          />
+          <img
+            src="https://caniuse.bitsofco.de/image/colr-v1.jpg"
+            alt="Data on support for the colr-v1 feature across the major browsers from caniuse.com"
+          />
+        </picture>
+      </p>
+    </footer>
+  </body>
+</html>
